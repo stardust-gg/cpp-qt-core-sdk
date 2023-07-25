@@ -10,13 +10,13 @@
  */
 
 /*
- * OAISDTemplateCreateBulk_props.h
+ * OAISDPlayerGetInventoryResponse_props.h
  *
  * 
  */
 
-#ifndef OAISDTemplateCreateBulk_props_H
-#define OAISDTemplateCreateBulk_props_H
+#ifndef OAISDPlayerGetInventoryResponse_props_H
+#define OAISDPlayerGetInventoryResponse_props_H
 
 #include <QJsonObject>
 
@@ -28,11 +28,11 @@
 namespace stardust {
 namespace core {
 
-class OAISDTemplateCreateBulk_props : public OAIObject {
+class OAISDPlayerGetInventoryResponse_props : public OAIObject {
 public:
-    OAISDTemplateCreateBulk_props();
-    OAISDTemplateCreateBulk_props(QString json);
-    ~OAISDTemplateCreateBulk_props() override;
+    OAISDPlayerGetInventoryResponse_props();
+    OAISDPlayerGetInventoryResponse_props(QString json);
+    ~OAISDPlayerGetInventoryResponse_props() override;
 
     QString asJson() const override;
     QJsonObject asJsonObject() const override;
@@ -49,10 +49,10 @@ public:
     bool is_r_mutable_Set() const;
     bool is_r_mutable_Valid() const;
 
-    OAIObject getRMutable() const;
-    void setRMutable(const OAIObject &r_mutable);
-    bool is_r_mutable_Set() const;
-    bool is_r_mutable_Valid() const;
+    OAIObject getInherited() const;
+    void setInherited(const OAIObject &inherited);
+    bool is_inherited_Set() const;
+    bool is_inherited_Valid() const;
 
     virtual bool isSet() const override;
     virtual bool isValid() const override;
@@ -68,14 +68,14 @@ private:
     bool m_r_mutable_isSet;
     bool m_r_mutable_isValid;
 
-    OAIObject r_mutable;
-    bool m_r_mutable_isSet;
-    bool m_r_mutable_isValid;
+    OAIObject inherited;
+    bool m_inherited_isSet;
+    bool m_inherited_isValid;
 };
 
 } // namespace stardust
 } // namespace core
 
-Q_DECLARE_METATYPE(stardust::core::OAISDTemplateCreateBulk_props)
+Q_DECLARE_METATYPE(stardust::core::OAISDPlayerGetInventoryResponse_props)
 
-#endif // OAISDTemplateCreateBulk_props_H
+#endif // OAISDPlayerGetInventoryResponse_props_H

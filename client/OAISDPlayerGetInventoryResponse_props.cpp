@@ -9,7 +9,7 @@
  * Do not edit the class manually.
  */
 
-#include "OAISDTemplateCreateBulk_props.h"
+#include "OAISDPlayerGetInventoryResponse_props.h"
 
 #include <QDebug>
 #include <QJsonArray>
@@ -21,18 +21,18 @@
 namespace stardust {
 namespace core {
 
-OAISDTemplateCreateBulk_props::OAISDTemplateCreateBulk_props(QString json) {
+OAISDPlayerGetInventoryResponse_props::OAISDPlayerGetInventoryResponse_props(QString json) {
     this->initializeModel();
     this->fromJson(json);
 }
 
-OAISDTemplateCreateBulk_props::OAISDTemplateCreateBulk_props() {
+OAISDPlayerGetInventoryResponse_props::OAISDPlayerGetInventoryResponse_props() {
     this->initializeModel();
 }
 
-OAISDTemplateCreateBulk_props::~OAISDTemplateCreateBulk_props() {}
+OAISDPlayerGetInventoryResponse_props::~OAISDPlayerGetInventoryResponse_props() {}
 
-void OAISDTemplateCreateBulk_props::initializeModel() {
+void OAISDPlayerGetInventoryResponse_props::initializeModel() {
 
     m_immutable_isSet = false;
     m_immutable_isValid = false;
@@ -40,18 +40,18 @@ void OAISDTemplateCreateBulk_props::initializeModel() {
     m_r_mutable_isSet = false;
     m_r_mutable_isValid = false;
 
-    m_r_mutable_isSet = false;
-    m_r_mutable_isValid = false;
+    m_inherited_isSet = false;
+    m_inherited_isValid = false;
 }
 
-void OAISDTemplateCreateBulk_props::fromJson(QString jsonString) {
+void OAISDPlayerGetInventoryResponse_props::fromJson(QString jsonString) {
     QByteArray array(jsonString.toStdString().c_str());
     QJsonDocument doc = QJsonDocument::fromJson(array);
     QJsonObject jsonObject = doc.object();
     this->fromJsonObject(jsonObject);
 }
 
-void OAISDTemplateCreateBulk_props::fromJsonObject(QJsonObject json) {
+void OAISDPlayerGetInventoryResponse_props::fromJsonObject(QJsonObject json) {
 
     m_immutable_isValid = ::stardust::core::fromJsonValue(immutable, json[QString("immutable")]);
     m_immutable_isSet = !json[QString("immutable")].isNull() && m_immutable_isValid;
@@ -59,18 +59,18 @@ void OAISDTemplateCreateBulk_props::fromJsonObject(QJsonObject json) {
     m_r_mutable_isValid = ::stardust::core::fromJsonValue(r_mutable, json[QString("mutable")]);
     m_r_mutable_isSet = !json[QString("mutable")].isNull() && m_r_mutable_isValid;
 
-    m_r_mutable_isValid = ::stardust::core::fromJsonValue(r_mutable, json[QString("$mutable")]);
-    m_r_mutable_isSet = !json[QString("$mutable")].isNull() && m_r_mutable_isValid;
+    m_inherited_isValid = ::stardust::core::fromJsonValue(inherited, json[QString("inherited")]);
+    m_inherited_isSet = !json[QString("inherited")].isNull() && m_inherited_isValid;
 }
 
-QString OAISDTemplateCreateBulk_props::asJson() const {
+QString OAISDPlayerGetInventoryResponse_props::asJson() const {
     QJsonObject obj = this->asJsonObject();
     QJsonDocument doc(obj);
     QByteArray bytes = doc.toJson();
     return QString(bytes);
 }
 
-QJsonObject OAISDTemplateCreateBulk_props::asJsonObject() const {
+QJsonObject OAISDPlayerGetInventoryResponse_props::asJsonObject() const {
     QJsonObject obj;
     if (m_immutable_isSet) {
         obj.insert(QString("immutable"), ::stardust::core::toJsonValue(immutable));
@@ -78,61 +78,61 @@ QJsonObject OAISDTemplateCreateBulk_props::asJsonObject() const {
     if (m_r_mutable_isSet) {
         obj.insert(QString("mutable"), ::stardust::core::toJsonValue(r_mutable));
     }
-    if (m_r_mutable_isSet) {
-        obj.insert(QString("$mutable"), ::stardust::core::toJsonValue(r_mutable));
+    if (m_inherited_isSet) {
+        obj.insert(QString("inherited"), ::stardust::core::toJsonValue(inherited));
     }
     return obj;
 }
 
-OAIObject OAISDTemplateCreateBulk_props::getImmutable() const {
+OAIObject OAISDPlayerGetInventoryResponse_props::getImmutable() const {
     return immutable;
 }
-void OAISDTemplateCreateBulk_props::setImmutable(const OAIObject &immutable) {
+void OAISDPlayerGetInventoryResponse_props::setImmutable(const OAIObject &immutable) {
     this->immutable = immutable;
     this->m_immutable_isSet = true;
 }
 
-bool OAISDTemplateCreateBulk_props::is_immutable_Set() const{
+bool OAISDPlayerGetInventoryResponse_props::is_immutable_Set() const{
     return m_immutable_isSet;
 }
 
-bool OAISDTemplateCreateBulk_props::is_immutable_Valid() const{
+bool OAISDPlayerGetInventoryResponse_props::is_immutable_Valid() const{
     return m_immutable_isValid;
 }
 
-OAIObject OAISDTemplateCreateBulk_props::getRMutable() const {
+OAIObject OAISDPlayerGetInventoryResponse_props::getRMutable() const {
     return r_mutable;
 }
-void OAISDTemplateCreateBulk_props::setRMutable(const OAIObject &r_mutable) {
+void OAISDPlayerGetInventoryResponse_props::setRMutable(const OAIObject &r_mutable) {
     this->r_mutable = r_mutable;
     this->m_r_mutable_isSet = true;
 }
 
-bool OAISDTemplateCreateBulk_props::is_r_mutable_Set() const{
+bool OAISDPlayerGetInventoryResponse_props::is_r_mutable_Set() const{
     return m_r_mutable_isSet;
 }
 
-bool OAISDTemplateCreateBulk_props::is_r_mutable_Valid() const{
+bool OAISDPlayerGetInventoryResponse_props::is_r_mutable_Valid() const{
     return m_r_mutable_isValid;
 }
 
-OAIObject OAISDTemplateCreateBulk_props::getRMutable() const {
-    return r_mutable;
+OAIObject OAISDPlayerGetInventoryResponse_props::getInherited() const {
+    return inherited;
 }
-void OAISDTemplateCreateBulk_props::setRMutable(const OAIObject &r_mutable) {
-    this->r_mutable = r_mutable;
-    this->m_r_mutable_isSet = true;
-}
-
-bool OAISDTemplateCreateBulk_props::is_r_mutable_Set() const{
-    return m_r_mutable_isSet;
+void OAISDPlayerGetInventoryResponse_props::setInherited(const OAIObject &inherited) {
+    this->inherited = inherited;
+    this->m_inherited_isSet = true;
 }
 
-bool OAISDTemplateCreateBulk_props::is_r_mutable_Valid() const{
-    return m_r_mutable_isValid;
+bool OAISDPlayerGetInventoryResponse_props::is_inherited_Set() const{
+    return m_inherited_isSet;
 }
 
-bool OAISDTemplateCreateBulk_props::isSet() const {
+bool OAISDPlayerGetInventoryResponse_props::is_inherited_Valid() const{
+    return m_inherited_isValid;
+}
+
+bool OAISDPlayerGetInventoryResponse_props::isSet() const {
     bool isObjectUpdated = false;
     do {
         if (m_immutable_isSet) {
@@ -145,7 +145,7 @@ bool OAISDTemplateCreateBulk_props::isSet() const {
             break;
         }
 
-        if (m_r_mutable_isSet) {
+        if (m_inherited_isSet) {
             isObjectUpdated = true;
             break;
         }
@@ -153,9 +153,9 @@ bool OAISDTemplateCreateBulk_props::isSet() const {
     return isObjectUpdated;
 }
 
-bool OAISDTemplateCreateBulk_props::isValid() const {
+bool OAISDPlayerGetInventoryResponse_props::isValid() const {
     // only required properties are required for the object to be considered valid
-    return true;
+    return m_immutable_isValid && m_r_mutable_isValid && m_inherited_isValid && true;
 }
 
 } // namespace stardust

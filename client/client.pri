@@ -24,6 +24,7 @@ HEADERS += \
     $${PWD}/OAISDPlayerGetIdResponse.h \
     $${PWD}/OAISDPlayerGetIdsResponse.h \
     $${PWD}/OAISDPlayerGetInventoryResponse.h \
+    $${PWD}/OAISDPlayerGetInventoryResponse_props.h \
     $${PWD}/OAISDPlayerGetResponse.h \
     $${PWD}/OAISDPlayerMutateRequest.h \
     $${PWD}/OAISDPlayerWalletGetResponse.h \
@@ -43,7 +44,6 @@ HEADERS += \
     $${PWD}/OAISDTemplateGetTokensResponse.h \
     $${PWD}/OAISDTemplateGetTokensResponse_player.h \
     $${PWD}/OAISDTemplateGetTokensResponse_token.h \
-    $${PWD}/OAISDTemplateGetTokensResponse_token_props.h \
     $${PWD}/OAISDTemplateMutateRequest.h \
     $${PWD}/OAISDTokenBurnRequest.h \
     $${PWD}/OAISDTokenBurnRequest_tokenObjects_inner.h \
@@ -96,6 +96,7 @@ SOURCES += \
     $${PWD}/OAISDPlayerGetIdResponse.cpp \
     $${PWD}/OAISDPlayerGetIdsResponse.cpp \
     $${PWD}/OAISDPlayerGetInventoryResponse.cpp \
+    $${PWD}/OAISDPlayerGetInventoryResponse_props.cpp \
     $${PWD}/OAISDPlayerGetResponse.cpp \
     $${PWD}/OAISDPlayerMutateRequest.cpp \
     $${PWD}/OAISDPlayerWalletGetResponse.cpp \
@@ -115,7 +116,6 @@ SOURCES += \
     $${PWD}/OAISDTemplateGetTokensResponse.cpp \
     $${PWD}/OAISDTemplateGetTokensResponse_player.cpp \
     $${PWD}/OAISDTemplateGetTokensResponse_token.cpp \
-    $${PWD}/OAISDTemplateGetTokensResponse_token_props.cpp \
     $${PWD}/OAISDTemplateMutateRequest.cpp \
     $${PWD}/OAISDTokenBurnRequest.cpp \
     $${PWD}/OAISDTokenBurnRequest_tokenObjects_inner.cpp \
